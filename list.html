@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>emps list</title>
+</head>
+<body>
+<script>
+// 1. 你的原始数据（把你 1.json 里的数据粘贴进来）
+const data = {
+  "code": 1,
+  "msg": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "谢逊",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 1,
+      "job": "1",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    },
+    {
+      "id": 2,
+      "name": "朱展林",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 2,
+      "job": "3",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    },
+    {
+      "id": 3,
+      "name": "刘烨",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 1,
+      "job": "2",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    }
+  ]
+};
+
+// 2. 获取 URL 参数（?name=xx&gender=xx）
+const params = new URLSearchParams(location.search);
+const name = params.get('name') || '';
+const gender = params.get('gender') || '';
+const job = params.get('job') || '';
+
+// 3. 自动筛选数据
+let result = data.data;
+
+if (name) {
+  result = result.filter(item => item.name.includes(name));
+}
+if (gender) {
+  result = result.filter(item => item.gender == gender);
+}
+if (job) {
+  result = result.filter(item => item.job == job);
+}
+
+// 4. 返回标准格式（和 itheima 一样）
+document.write(JSON.stringify({
+  code: 1,
+  msg: "success",
+  data: result
+}));
+</script>
+</body>
+</html>
