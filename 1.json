@@ -1,0 +1,33 @@
+{
+  "code": 1,
+  "msg": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "谢逊",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 1,
+      "job": "1",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    },
+    {
+      "id": 2,
+      "name": "朱展林",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 2,
+      "job": "3",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    },
+    {
+      "id": 3,
+      "name": "刘烨",
+      "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/4.jpg",
+      "gender": 1,
+      "job": "2",
+      "entrydate": "2023-06-09",
+      "updatetime": "2026-02-25T20:31:05"
+    }
+  ]
+}
